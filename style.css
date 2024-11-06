@@ -518,49 +518,7 @@ button.removeField:hover {
     background-color: #c9302c;
 }
 
-/* Resume Display Styling */
-#resumeDisplay {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    display: none; /* Initially hidden */
-    overflow: auto;
-}
-
-/* Resume Header */
-#resumeDisplay h1 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-#resumeDisplay p {
-    font-size: 1.2em;
-    color: #666;
-}
-
-#resumeDisplay h2 {
-    font-size: 1.6em;
-    margin-top: 20px;
-    color: #333;
-}
-
-#resumeDisplay ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#resumeDisplay li {
-    font-size: 1.1em;
-    margin: 8px 0;
-}
-
-/* Section for Education, Experience, Skills, Languages */
-#resumeDisplay ul {
-    margin-left: 20px;
-}
+/* Resume Display Styling *
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -569,7 +527,7 @@ button.removeField:hover {
         align-items: center;
     }
 
-    #inputFields, #resumeDisplay {
+    #inputFields{
         width: 90%;
         margin-bottom: 20px;
     }
@@ -586,11 +544,109 @@ button.removeField:hover {
         padding: 8px 12px;
     }
 
-    #resumeDisplay h1 {
-        font-size: 1.8em;
-    }
+}
 
-    #resumeDisplay h2 {
-        font-size: 1.4em;
-    }
+
+
+
+/* For Template1 */
+
+
+.resume{
+    flex-basis: 60%;
+    display: flex;
+    height: auto;
+    padding: 40px 20px;
+    background-color: white     ;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: #f4f4f4;
+    padding: 30px 20px;
+    align-items: center;
+}
+
+.left img{
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+}
+
+.left .sub-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.left .sub-section h2{
+    background: #444442;
+    width: 200px;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.left .sub-section ul{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left .sub-section div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.left p, .left li{
+    color: #505050;
+}
+
+.right{
+    background: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right .profile-name h1{
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+.right .profile-name h3{
+    font-weight: 300;
+}
+
+.right .sub-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right .sub-section h2{
+    font-size: 30px;
+}
+
+.right .sub-section .job{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right .sub-section .job div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right p, .right li{
+    color: #505050;
 }

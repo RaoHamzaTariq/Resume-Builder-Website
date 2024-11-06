@@ -111,33 +111,82 @@ resumeForm.addEventListener('submit', (event) => {
     const languages = Array.from(document.querySelectorAll('input[name="language[]"]')).map(input => input.value);
     // Generate the resume content
     let resumeContent = `
-        <h1>${name}</h1>
-        <p>${phone} | ${email} | ${address}</p>
-        <p><strong>About Me:</strong> ${aboutUs}</p>
-        
-        <h2>Education</h2>
-        <ul>
-            ${degrees.map((degree, index) => `
-                <li><strong>${degree}</strong> at ${institutes[index]} (${durations[index]})</li>
-            `).join('')}
-        </ul>
-        
-        <h2>Experience</h2>
-        <ul>
-            ${roles.map((role, index) => `
-                <li><strong>${role}</strong> at ${companies[index]} (${experienceDurations[index]}) - ${tasks[index]}</li>
-            `).join('')}
-        </ul>
-        
-        <h2>Skills</h2>
-        <ul>
-            ${skills.map(skill => `<li>${skill}</li>`).join('')}
-        </ul>
-        
-        <h2>Languages</h2>
-        <ul>
-            ${languages.map(language => `<li>${language}</li>`).join('')}
-        </ul>
+         <div class="resume">
+        <div class="left">
+            <img src="E:\Resume-Builder-Website\Images\Rao Hamza Tariq.png" alt="">
+            <div class="sub-section">
+                <h2>CONTACT ME</h2>
+                <ul>
+                    <p>${email}</p>
+                    <p>${address}</p>
+                    <p>${phone}</p>
+                </ul>
+            </div>
+            <div class="sub-section">
+                <h2>EDUCATION</h2>
+                    ${degrees.map((degree, index) => `
+                        <div>
+                        <h3>${degree}</h3>
+                        <h4>${institutes[index]}</h4>
+                        <p>${durations[index]}</p>
+                    </div>
+                    `)}
+                    
+                </div>
+            <div class="sub-section">
+                <h2>SKILLS</h2>
+                <ul>
+${skills.map(skill => `<li>${skill}</li>`)}
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="profile-name">
+                <h1>Rao Hamza Tariq</h1>
+                <h3>Data Analyst</h3>
+            </div>
+            <div class="sub-section">
+                <h2>WORK EXPERIENCE</h2>
+                <div class="job">
+                    <div>
+                        <p>Data Analyst</p>
+                        <h4>2023 - 2024</h4>
+                    </div>
+                    <h4>Xeven Soluions</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolores culpa a laborum doloribus amet nostrum modi quasi animi voluptates? Excepturi quasi provident accusamus alias quisquam voluptate laborum ratione sequi.</p>
+                </div>
+                <div class="job">
+                    <div>
+                        <p>Data Analyst</p>
+                        <h4>2023 - 2024</h4>
+                    </div>
+                    <h4>Xeven Soluions</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolores culpa a laborum doloribus amet nostrum modi quasi animi voluptates? Excepturi quasi provident accusamus alias quisquam voluptate laborum ratione sequi.</p>
+                </div>
+                <div class="job">
+                    <div>
+                        <p>Data Analyst</p>
+                        <h4>2023 - 2024</h4>
+                    </div>
+                    <h4>Xeven Soluions</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolores culpa a laborum doloribus amet nostrum modi quasi animi voluptates? Excepturi quasi provident accusamus alias quisquam voluptate laborum ratione sequi.</p>
+                </div>
+
+            </div>
+            <div class="sub-section">
+                <h2>ABOUT ME</h2>
+                <p>I am an data analyst, junior data scientist and front-end developer with a strong track record of creating impactful data analytics dashboards and projects. I am currently expanding my expertise in data science and machine learning, taking on diverse projects to solve complex problems using cutting-edge techniques and methodologies. My passion lies in deriving actionable insights from data and translating them into compelling visualizations and content.</p>
+            </div>
+            <div class="sub-section">
+                <h2>LANGUAGES</h2>
+                <ul>
+                    <li>English</li>
+                    <li>Urdu</li>
+                    <li>French</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     `;
     // Display the resume content in the resume display section
     resumeDisplaySection.innerHTML = resumeContent;
