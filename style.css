@@ -424,3 +424,171 @@ main{
         margin: 5px 0;
     }
   }
+
+
+
+
+
+
+  /* The Resume Input*/
+  /* General Layout */
+
+/* Container for Form and Resume */
+#resume-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    max-width: 1200px;
+}
+
+/* Form Styling */
+#inputFields {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Buttons */
+button {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Add new fields button */
+button#addEducation, 
+button#addExperience, 
+button#addSkill, 
+button#addLanguage {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Remove field button */
+button.removeField {
+    background-color: #d9534f;
+    font-size: 0.9em;
+    margin-top: 5px;
+    width: auto;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+button.removeField:hover {
+    background-color: #c9302c;
+}
+
+/* Resume Display Styling */
+#resumeDisplay {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    display: none; /* Initially hidden */
+    overflow: auto;
+}
+
+/* Resume Header */
+#resumeDisplay h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#resumeDisplay p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+#resumeDisplay h2 {
+    font-size: 1.6em;
+    margin-top: 20px;
+    color: #333;
+}
+
+#resumeDisplay ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#resumeDisplay li {
+    font-size: 1.1em;
+    margin: 8px 0;
+}
+
+/* Section for Education, Experience, Skills, Languages */
+#resumeDisplay ul {
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #resume-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #inputFields, #resumeDisplay {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #inputFields {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    #resumeDisplay h1 {
+        font-size: 1.8em;
+    }
+
+    #resumeDisplay h2 {
+        font-size: 1.4em;
+    }
+}

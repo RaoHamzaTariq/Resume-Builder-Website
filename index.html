@@ -60,52 +60,133 @@
             </div>
         </section>
 
+
+        <section>
+            <div id="inputFields" style="display: none;">
+                <form id="resumeForm">
+                    <!-- Personal Information -->
+                    <div class="section">
+                        <h3>Personal Information</h3>
+                        <label for="profilePic">Profile Picture:</label>
+                        <input type="file" id="profilePic" name="profilePic">
+                        
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+                        
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your address">
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        
+                        <label for="aboutUs">About Us:</label>
+                        <textarea id="aboutUs" name="aboutUs" placeholder="About you"></textarea>
+                    </div>
+        
+                    <!-- Education Fields -->
+                    <div class="section" id="educationFields">
+                        <h3>Education</h3>
+                        <div class="education-entry">
+                            <input type="text" name="degree[]" placeholder="Degree">
+                            <input type="text" name="institute[]" placeholder="Institute">
+                            <input type="text" name="duration[]" placeholder="Duration">
+                            <button type="button" class="removeField">Remove Education</button>
+                        </div>
+                        <button type="button" id="addEducation">Add Education</button>
+                    </div>
+        
+                    <!-- Experience Fields -->
+                    <div class="section" id="experienceFields">
+                        <h3>Experience</h3>
+                        <div class="experience-entry">
+                            <input type="text" name="role[]" placeholder="Role">
+                            <input type="text" name="company[]" placeholder="Company">
+                            <input type="text" name="durationExperience[]" placeholder="Duration">
+                            <input type="text" name="task[]" placeholder="Tasks">
+                            <button type="button" class="removeField">Remove Experience</button>
+                        </div>
+                        <button type="button" id="addExperience">Add Experience</button>
+                    </div>
+        
+                    <!-- Skills Fields -->
+                    <div class="section" id="skillsFields">
+                        <h3>Skills</h3>
+                        <div class="skills-entry">
+                            <input type="text" name="skills[]" placeholder="Skill">
+                            <button type="button" class="removeField">Remove Skill</button>
+                        </div>
+                        <button type="button" id="addSkill">Add Skill</button>
+                    </div>
+        
+                    <!-- Language Fields -->
+                    <div class="section" id="languageFields">
+                        <h3>Languages</h3>
+                        <div class="language-entry">
+                            <input type="text" name="language[]" placeholder="Language">
+                            <button type="button" class="removeField">Remove Language</button>
+                        </div>
+                        <button type="button" id="addLanguage">Add Language</button>
+                    </div>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="resumeDisplay">
+
+            </div>
+        </section>
+
+
         <section id="resume-testimonials" class="testimonial-section">
             <h1>Hear from Our <span style="color: #405cf5">Satisfied Users</span></h1>
             <div class="testimonial-container">
                 <div class="testimonial-wrapper">
                     <!-- Testimonials - Start of Loop -->
                     <div class="testimonial">
-                        "Great service! Highly recommended! I was amazed by how quickly everything was done. The team really knows what they are doing and they made the process so much easier for me." - John D.
+                        "Great service! Highly recommended! I was amazed by how quickly everything was done. The team really knows what they are doing and they made the process so much easier for me." - <span style="color: #405cf5;">John D.</span>
                     </div>
                     <div class="testimonial">
-                        "I loved the experience and will definitely come back again. The team was extremely helpful, and their attention to detail really made all the difference. I felt valued and heard throughout the whole process." - Sarah K.
+                        "I loved the experience and will definitely come back again. The team was extremely helpful, and their attention to detail really made all the difference. I felt valued and heard throughout the whole process." - <span style="color: #405cf5;">Sarah K.</span>
                     </div>
                     <div class="testimonial">
-                        "Professional and reliable. Thank you! The service was seamless, and I appreciated how knowledgeable and patient everyone was. It's rare to find such a trustworthy service these days." - Michael R.
+                        "Professional and reliable. Thank you! The service was seamless, and I appreciated how knowledgeable and patient everyone was. It's rare to find such a trustworthy service these days." - <span style="color: #405cf5;">Michael R.</span>
                     </div>
                     <div class="testimonial">
-                        "Exceeded my expectations! From start to finish, everything was handled smoothly, and the end result was better than I could have imagined. I’ll definitely recommend this service to all my friends and family." - Emma L.
+                        "Exceeded my expectations! From start to finish, everything was handled smoothly, and the end result was better than I could have imagined. I’ll definitely recommend this service to all my friends and family." - <span style="color: #405cf5;">Emma L.</span>
                     </div>
                     <div class="testimonial">
-                        "Exceptional quality and speed. I couldn't be happier with how fast everything was completed. They took the time to ensure everything was done to the highest standard, and the results speak for themselves." - Olivia P.
+                        "Exceptional quality and speed. I couldn't be happier with how fast everything was completed. They took the time to ensure everything was done to the highest standard, and the results speak for themselves." - <span style="color: #405cf5;">Olivia P.</span>
                     </div>
                     <div class="testimonial">
-                        "A truly personalized experience. They took the time to understand my needs and tailored everything to my specifications. I’ve never had such a customized service before, and I couldn’t be more satisfied." - Liam N.
+                        "A truly personalized experience. They took the time to understand my needs and tailored everything to my specifications. I’ve never had such a customized service before, and I couldn’t be more satisfied." - <span style="color: #405cf5;">Liam N.</span>
                     </div>
                     <!-- Repeat Testimonials -->
                     <div class="testimonial">
-                        "Great service! Highly recommended! The process was so easy, and the team went above and beyond to meet my needs. I felt like they genuinely cared about providing the best possible outcome." - John D.
+                        "Great service! Highly recommended! The process was so easy, and the team went above and beyond to meet my needs. I felt like they genuinely cared about providing the best possible outcome." - <span style="color: #405cf5;">John D.</span>
                     </div>
                     <div class="testimonial">
-                        "I loved the experience and will definitely come back again. They made me feel so comfortable, and the whole team was super friendly. I’ve never had such great customer service." - Sarah K.
+                        "I loved the experience and will definitely come back again. They made me feel so comfortable, and the whole team was super friendly. I’ve never had such great customer service." - <span style="color: #405cf5;">Sarah K.</span>
                     </div>
                     <div class="testimonial">
-                        "Professional and reliable. Thank you! The staff was courteous, the work was done on time, and I couldn’t be happier with the overall experience. You’ve earned a loyal customer!" - Michael R.
+                        "Professional and reliable. Thank you! The staff was courteous, the work was done on time, and I couldn’t be happier with the overall experience. You’ve earned a loyal customer!" - <span style="color: #405cf5;">Michael R.</span>
                     </div>
                     <div class="testimonial">
-                        "Exceeded my expectations! I was initially skeptical, but after seeing the results, I’m a believer. The team took the time to explain everything, and the end product was flawless." - Emma L.
+                        "Exceeded my expectations! I was initially skeptical, but after seeing the results, I’m a believer. The team took the time to explain everything, and the end product was flawless." - <span style="color: #405cf5;">Emma L.</span>
                     </div>
                     <div class="testimonial">
-                        "Exceptional quality and speed. The attention to detail was impeccable, and I couldn’t believe how quickly they got everything done. I’ll be back for sure!" - Olivia P.
+                        "Exceptional quality and speed. The attention to detail was impeccable, and I couldn’t believe how quickly they got everything done. I’ll be back for sure!" - <span style="color: #405cf5;">Olivia P.</span>
                     </div>
                     <div class="testimonial">
-                        "A truly personalized experience. From the first conversation to the final result, everything was tailored to fit my needs perfectly. This is the kind of service everyone should experience." - Liam N.
+                        "A truly personalized experience. From the first conversation to the final result, everything was tailored to fit my needs perfectly. This is the kind of service everyone should experience." - <span style="color: #405cf5;">Liam N.</span>
                     </div>
                     <!-- Testimonials - End of Loop -->
                 </div>
             </div>
         </section>
+        
 
         <footer class="footer">
             <div class="footer-content">
