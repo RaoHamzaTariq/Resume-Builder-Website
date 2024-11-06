@@ -435,7 +435,9 @@ main{
 
 /* Container for Form and Resume */
 #resume-form {
+    
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-top: 30px;
     max-width: 1200px;
