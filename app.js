@@ -2,6 +2,7 @@
 // TypeScript code to manage the dynamic form and generate resume
 let profilePicDataURL = '';
 let activeTemplate = "";
+let resumeDownload = "";
 // Template selection (unchanged)
 const template1Button = document.getElementById('template1');
 const template2Button = document.getElementById('template2');
@@ -14,30 +15,37 @@ const inputFields = document.getElementById('inputFields');
 template1Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
     activeTemplate = "template1";
+    resumeDownload = "resume1";
 });
 template2Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
     activeTemplate = "template2";
+    resumeDownload = "resume";
 });
 template3Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
     activeTemplate = "template3";
+    resumeDownload = "resume3";
 });
 template4Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
     activeTemplate = "template4";
+    resumeDownload = "resume4";
 });
 template5Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
     activeTemplate = "template5";
+    resumeDownload = "resume5";
 });
 template6Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
     activeTemplate = "template6";
+    resumeDownload = "resume6";
 });
 template7Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
     activeTemplate = "template7";
+    resumeDownload = "resume7";
 });
 // Add Education, Experience, Skill, and Language fields (unchanged)
 const addEducationButton = document.getElementById('addEducation');
@@ -128,9 +136,9 @@ resumeForm.addEventListener('submit', (event) => {
         <div class="left1">
         ${profilePic ? `<img src="${profilePic}" alt="Profile Picture" />` :
                 ''}          
-          <div class="profile-name1" style="display: flex; flex-direction: column; gap: 5px;">
+          <div class="profile-name1" >
                 <h1>${name}</h1>
-                <h3 style="font-size: medium; text-align: center;">${Mainrole}</h3>
+                <h3 >${Mainrole}</h3>
             </div>
             <div class="contactus1">
                     <p>${email}</p>
@@ -140,10 +148,10 @@ resumeForm.addEventListener('submit', (event) => {
             <div class="sub-section1">
                 <h2>RELEVENT SKILLS</h2>
                 <ul>
-                ${skills.map(skill => `<li>Data Analyst</li>`).join('')}
+                ${skills.map(skill => `<li>${skill}</li>`).join('')}
                 </ul>
             </div>
-            <div class="sub-section1">
+            <div class="sub-section1 ">
                 <h2>ABOUT US</h2>
                 <p>${aboutUs}</p>
             </div>
@@ -203,7 +211,7 @@ resumeForm.addEventListener('submit', (event) => {
                         <h4>${institutes[index]}</h4>
                         <p>${durations[index]}</p>
                     </div>
-                `).join('')}  <!-- Use join('') to avoid commas -->
+                `).join('')}  
             </div>
             <div class="sub-section">
                 <h2>SKILLS</h2>
@@ -283,7 +291,7 @@ document.getElementById('profilePic').addEventListener('change', (e) => {
 // Download PDF button event
 document.getElementById('download-pdf-btn').addEventListener('click', () => {
     // Check if resume content is available
-    const resumeContent = document.getElementById('resume');
+    const resumeContent = document.getElementById("resumeDisplay");
     if (!resumeContent || resumeContent.innerHTML.trim() === "") {
         alert("Please generate the resume first.");
         return;

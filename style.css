@@ -666,7 +666,7 @@ button.removeField:hover {
     display: flex;
     height: auto;
     padding: 40px 20px;
-    background-color: white     ;
+    background-color: white;
 }
 
 .left1{
@@ -677,6 +677,26 @@ button.removeField:hover {
     padding: 30px 20px;
     align-items: center;
     color: white;
+}
+
+.left .profile-name1{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.left .profile-name1 h1{
+    font-size: larger;
+    text-align: center;
+    color:white;
+}
+
+
+.left .profile-name1 h3{
+    font-size: medium;
+    text-align: center;
+    color:white;
 }
 
 
@@ -691,11 +711,13 @@ button.removeField:hover {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    color: white;
 }
 
 .left1 .sub-section1 h2{
 
     font-size: 20px;
+    color: white;
 }
 
 .left1 .sub-section1 ul{
@@ -703,17 +725,26 @@ button.removeField:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: white;
 }
 
 .left1 .contactus1{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: white;
 }
 
 .left1 .contactus1 p{
     font-size: small;
+    color: white;
 }
+
+.left1 .sub-section1  p{
+    font-size: small;
+    color: white;
+}
+
 
 
 
@@ -736,6 +767,7 @@ button.removeField:hover {
 
 .right1 .sub-section1 h2{
     font-size: 20px;
+    width: 300px;
     background-color: #dff0fa;
     padding: 10px;
 }
