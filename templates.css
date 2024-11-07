@@ -8,15 +8,15 @@
 
 body{
     display: flex;
-    font-family: "Poppins";
-    background-color: aliceblue;    
+    font-family: "Open Sans";
+    background-color: rgb(78, 119, 155);    
 }
 
 .input-form{
     flex-basis: 40%;
 }
 
-.resume{
+.resume1{
     flex-basis: 60%;
     display: flex;
     height: auto;
@@ -24,93 +24,80 @@ body{
     background-color: white     ;
 }
 
-.left{
+.left1{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    background: #f4f4f4;
+    background: #2b77ab;
     padding: 30px 20px;
     align-items: center;
+    color: white;
 }
 
-.left img{
+
+.left1 img{
     border-radius: 50%;
     width: 200px;
     height: auto;
 }
 
-.left .sub-section{
+.left1 .sub-section1{
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
 }
 
-.left .sub-section h2{
-    background: #444442;
-    width: 200px;
-    padding: 8px 15px;
-    color: white;
-    border-radius: 20px;
-    text-align: center;
+.left1 .sub-section1 h2{
+
     font-size: 20px;
 }
 
-.left .sub-section ul{
+.left1 .sub-section1 ul{
     text-align: start;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.left .sub-section div{
+.left1 .contactus1{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.left p, .left li{
-    color: #505050;
+.left1 .contactus1 p{
+    font-size: small;
 }
 
-.right{
+
+
+.right1{
     background: #ffffff;
     padding: 20px 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: black;
 }
 
-.right .profile-name h1{
-    font-size: 60px;
-    line-height: 1.1;
-    font-weight: 600;
-}
-.right .profile-name h3{
-    font-weight: 300;
-}
 
-.right .sub-section{
+
+.right1 .sub-section1{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.right .sub-section h2{
-    font-size: 30px;
+.right1 .sub-section1 h2{
+    font-size: 20px;
+    background-color: #dff0fa;
+    padding: 10px;
 }
 
-.right .sub-section .job{
+.right1 .sub-section1 .subsubsection1{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 7px;
 }
 
-.right .sub-section .job div{
-    display: flex;
-    justify-content: space-between;
-}
-
-.right p, .right li{
-    color: #505050;
-}

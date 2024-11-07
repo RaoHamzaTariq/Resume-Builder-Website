@@ -144,7 +144,70 @@ const profilePic = profilePicDataURL;
     // Generate the resume content
     switch (activeTemplate) {
         case 'template1':
-            resumeContent = `<div>template1</div>`
+            resumeContent = `<div class="resume1">
+        <div class="left1">
+        ${profilePic ? `<img src="${profilePic}" alt="Profile Picture" />` :
+        ''}          
+          <div class="profile-name1" style="display: flex; flex-direction: column; gap: 5px;">
+                <h1>${name}</h1>
+                <h3 style="font-size: medium; text-align: center;">${Mainrole}</h3>
+            </div>
+            <div class="contactus1">
+                    <p>${email}</p>
+                    <p>${address}</p>
+                    <p>${phone}</p>
+            </div>
+            <div class="sub-section1">
+                <h2>RELEVENT SKILLS</h2>
+                <ul>
+                ${skills.map(skill=> 
+                    `<li>Data Analyst</li>`
+                ).join('')}
+                </ul>
+            </div>
+            <div class="sub-section1">
+                <h2>ABOUT US</h2>
+                <p>${aboutUs}</p>
+            </div>
+            <div class="sub-section1">
+                <h2>LANGUAGES</h2>
+                <ul>
+                  ${languages.map(language=> 
+                    `<li>${language}</li>`
+                ).join('')}
+                </ul>
+            </div>
+        </div>
+        <div class="right1">
+            <div class="sub-section1">
+                <h2>WORK EXPERIENCE</h2>
+                ${roles.map((role,index)=> 
+                    `<div class="subsubsection1">
+                    <p style="font-weight: 800;">${role}</p>                    
+                    <p>${companies[index]}</p>
+                    <p>${experienceDurations[index]}</p>
+                    <p>${tasks[index]}</p>
+                </div>`
+                ).join('')}
+
+                
+                
+                
+        </div>
+        <div class="sub-section1">
+            <h2>EDUCATION HISTORY</h2>
+            ${degrees.map((degree,index)=> 
+                    `<div class="subsubsection1">
+                    <p style="font-weight: 800;">${degree}</p>                    
+                    <p>${institutes[index]}</p>
+                    <p>${durations[index]}</p>
+                    
+                </div>`
+                ).join('')}
+            
+            
+    </div>
+    </div>`
             break;
 
         case 'template2':
