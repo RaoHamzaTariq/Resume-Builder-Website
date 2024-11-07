@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <title>Resume Builder Website</title>
 </head>
 <body>
@@ -68,10 +69,15 @@
                     <div class="section">
                         <h3>Personal Information</h3>
                         <label for="profilePic">Profile Picture:</label>
-                        <input type="file" id="profilePic" name="profilePic">
+                        <input type="file" id="profilePic" name="profilePic accept="image/*" />
+
+                      
                         
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                        <label for="mainRole">Role:</label>
+                        <input type="text" id="mainRole" name="mainRole" placeholder="Enter your role">
                         
                         <label for="phone">Phone:</label>
                         <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
@@ -133,10 +139,12 @@
         
                     <button type="submit">Submit</button>
                 </form>
+                <button type="button" id="download-pdf-btn">Download PDF</button>
             </div>
             <div id="resumeDisplay" style="display: none;">
 
             </div>
+            
         </section>
 
 

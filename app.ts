@@ -1,5 +1,9 @@
 // TypeScript code to manage the dynamic form and generate resume
 
+let profilePicDataURL: string = '';
+let activeTemplate :string="";
+
+
 // Template selection (unchanged)
 const template1Button = document.getElementById('template1') as HTMLButtonElement;
 const template2Button = document.getElementById('template2') as HTMLButtonElement;
@@ -12,24 +16,31 @@ const inputFields = document.getElementById('inputFields') as HTMLDivElement;
 
 template1Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
+    activeTemplate = "template1";
 });
 template2Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
+    activeTemplate = "template2";
 });
 template3Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
+    activeTemplate = "template3";
 });
 template4Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
+    activeTemplate = "template4";
 });
 template5Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
+    activeTemplate = "template5";
 });
 template6Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
+    activeTemplate = "template6";
 });
 template7Button.addEventListener('click', () => {
     inputFields.style.display = 'block';
+    activeTemplate = "template7";
 });
 
 // Add Education, Experience, Skill, and Language fields (unchanged)
@@ -112,6 +123,7 @@ resumeForm.addEventListener('submit', (event) => {
     const address = (document.getElementById('address') as HTMLInputElement).value;
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const aboutUs = (document.getElementById('aboutUs') as HTMLTextAreaElement).value;
+    const Mainrole = (document.getElementById('mainRole') as HTMLInputElement).value;
 
     // Collect dynamic fields (Education, Experience, Skills, Languages)
     const degrees = Array.from(document.querySelectorAll('input[name="degree[]"]')).map(input => (input as HTMLInputElement).value);
@@ -126,11 +138,21 @@ const tasks = Array.from(document.querySelectorAll('input[name="task[]"]')).map(
 const skills = Array.from(document.querySelectorAll('input[name="skills[]"]')).map(input => (input as HTMLInputElement).value);
 const languages = Array.from(document.querySelectorAll('input[name="language[]"]')).map(input => (input as HTMLInputElement).value);
 
+const profilePic = profilePicDataURL;
+
+     let resumeContent = ''
     // Generate the resume content
-    let resumeContent = `
-         <div class="resume">
+    switch (activeTemplate) {
+        case 'template1':
+            resumeContent = `<div>template1</div>`
+            break;
+
+        case 'template2':
+            resumeContent = `
+    <div class="resume">
         <div class="left">
-            <img src="E:\Resume-Builder-Website\Images\Rao Hamza Tariq.png" alt="">
+            ${profilePic ? `<img src="${profilePic}" alt="Profile Picture" />` :
+        ''}
             <div class="sub-section">
                 <h2>CONTACT ME</h2>
                 <ul>
@@ -141,75 +163,116 @@ const languages = Array.from(document.querySelectorAll('input[name="language[]"]
             </div>
             <div class="sub-section">
                 <h2>EDUCATION</h2>
-                    ${degrees.map((degree, index)=>`
-                        <div>
+                ${degrees.map((degree, index) => `
+                    <div>
                         <h3>${degree}</h3>
                         <h4>${institutes[index]}</h4>
                         <p>${durations[index]}</p>
                     </div>
-                    `)}
-                    
-                </div>
+                `).join('')}  <!-- Use join('') to avoid commas -->
+            </div>
             <div class="sub-section">
                 <h2>SKILLS</h2>
                 <ul>
-${skills.map(skill=>
-
-    `<li>${skill}</li>`
-)}
+                    ${skills.map(skill => `<li>${skill}</li>`).join('')}  <!-- Use join('') here as well -->
                 </ul>
             </div>
         </div>
         <div class="right">
             <div class="profile-name">
-                <h1>Rao Hamza Tariq</h1>
-                <h3>Data Analyst</h3>
+                <h1>${name}</h1>
+                <h3>${Mainrole}</h3>
             </div>
             <div class="sub-section">
                 <h2>WORK EXPERIENCE</h2>
-                <div class="job">
-                    <div>
-                        <p>Data Analyst</p>
-                        <h4>2023 - 2024</h4>
+                ${roles.map((role: string, index: number) => `
+                    <div class="job">
+                        <div>
+                            <p>${role}</p>
+                            <h4>${experienceDurations[index]}</h4>
+                        </div>
+                        <h4>${companies[index]}</h4>
+                        <p>${tasks[index]}</p>
                     </div>
-                    <h4>Xeven Soluions</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolores culpa a laborum doloribus amet nostrum modi quasi animi voluptates? Excepturi quasi provident accusamus alias quisquam voluptate laborum ratione sequi.</p>
-                </div>
-                <div class="job">
-                    <div>
-                        <p>Data Analyst</p>
-                        <h4>2023 - 2024</h4>
-                    </div>
-                    <h4>Xeven Soluions</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolores culpa a laborum doloribus amet nostrum modi quasi animi voluptates? Excepturi quasi provident accusamus alias quisquam voluptate laborum ratione sequi.</p>
-                </div>
-                <div class="job">
-                    <div>
-                        <p>Data Analyst</p>
-                        <h4>2023 - 2024</h4>
-                    </div>
-                    <h4>Xeven Soluions</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolores culpa a laborum doloribus amet nostrum modi quasi animi voluptates? Excepturi quasi provident accusamus alias quisquam voluptate laborum ratione sequi.</p>
-                </div>
-
+                `).join('')}  <!-- Ensure this is joined too -->
             </div>
             <div class="sub-section">
                 <h2>ABOUT ME</h2>
-                <p>I am an data analyst, junior data scientist and front-end developer with a strong track record of creating impactful data analytics dashboards and projects. I am currently expanding my expertise in data science and machine learning, taking on diverse projects to solve complex problems using cutting-edge techniques and methodologies. My passion lies in deriving actionable insights from data and translating them into compelling visualizations and content.</p>
+                <p>${aboutUs}</p>
             </div>
             <div class="sub-section">
                 <h2>LANGUAGES</h2>
                 <ul>
-                    <li>English</li>
-                    <li>Urdu</li>
-                    <li>French</li>
+                    ${languages.map((language: string) => `<li>${language}</li>`).join('')}  <!-- Join the languages list -->
                 </ul>
             </div>
         </div>
     </div>
-    `;
+`;
+            break
+
+        case 'template3':
+            resumeContent = `<div>template3</div>`
+            break
+
+        case 'template4':
+            resumeContent = `<div>template4</div>`
+            break
+        
+        case 'template5':
+                resumeContent = `<div>template5</div>`
+                break
+
+        case 'template6':
+                    resumeContent = `<div>template6</div>`
+                    break
+
+        case 'template7':
+                        resumeContent = `<div>template7</div>`
+                        break
+        // Add other cases for template3, template4, etc.
+        
+        default:
+            resumeContent = '<p>Please select a template.</p>';
+    }
+
 
     // Display the resume content in the resume display section
     resumeDisplaySection.innerHTML = resumeContent;
-    resumeDisplaySection.style.display = 'block';
+    resumeDisplaySection.style.display = 'flex';
+});
+
+// Profile picture upload event
+(document.getElementById('profilePic') as HTMLInputElement).addEventListener('change', (e: Event) => {
+    const input = e.target as HTMLInputElement;
+    const file = input.files ? input.files[0] : null;
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (event: ProgressEvent<FileReader>) => {
+            profilePicDataURL = event.target?.result as string;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// Download PDF button event
+(document.getElementById('download-pdf-btn') as HTMLButtonElement).addEventListener('click', () => {
+    // Check if resume content is available
+    const resumeContent = document.getElementById('resume') as HTMLDivElement;
+    if (!resumeContent || resumeContent.innerHTML.trim() === "") {
+        alert("Please generate the resume first.");
+        return;
+    }
+
+    // Options for html2pdf
+    const options = {
+        margin: 0.5,
+        filename: 'Resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Generate and save the PDF
+    html2pdf().set(options).from(resumeContent).save();
 });
