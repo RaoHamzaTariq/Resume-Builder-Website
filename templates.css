@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,97 +6,56 @@
 }
 
 body{
-    display: flex;
-    font-family: "Open Sans";
+    font-family: "Inter";
     background-color: rgb(78, 119, 155);    
 }
 
-.input-form{
+
+
+.resume6{
+    display: flex;
+    height: auto;
+    max-width: 800px;
+    min-width: 800px;
+    width: fit-content;
+    background-color: white;
+}
+
+.left6{
+    background-color: #222127;
     flex-basis: 40%;
+    min-width: 420px;
+    max-width: 420px;
+
 }
 
-.resume1{
+.right6{
+    background-color: white;
     flex-basis: 60%;
-    display: flex;
+    min-width: 480px;
+    max-width: 480px;
+}
+
+.left6 img{
     height: auto;
-    padding: 40px 20px;
-    background-color: white     ;
+    width: 420px;
+    max-width: 420px;
 }
 
-.left1{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    background: #2b77ab;
-    padding: 30px 20px;
-    align-items: center;
-    color: white;
+.profile-name6{
+    padding: 40px;
+    width: 100%;
+    background-color: #ffcb01;
+    margin-top: 100px;
 }
 
-
-.left1 img{
-    border-radius: 50%;
-    width: 200px;
-    height: auto;
+.profile-name6 h1{
+    font-size: 50px;
+    letter-spacing: 10px;
 }
 
-.left1 .sub-section1{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+.profile-name6 h4{
+    font-size: 25px;
+    letter-spacing: 7px;
+    font-weight: 400;
 }
-
-.left1 .sub-section1 h2{
-
-    font-size: 20px;
-}
-
-.left1 .sub-section1 ul{
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.left1 .contactus1{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.left1 .contactus1 p{
-    font-size: small;
-}
-
-
-
-.right1{
-    background: #ffffff;
-    padding: 20px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: black;
-}
-
-
-
-.right1 .sub-section1{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.right1 .sub-section1 h2{
-    font-size: 20px;
-    background-color: #dff0fa;
-    padding: 10px;
-}
-
-.right1 .sub-section1 .subsubsection1{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-

@@ -773,6 +773,192 @@ button.removeField:hover {
 }
 
 
+/* For Resume no 3 */
+
+.resume3{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+    max-width: 800px;
+    min-width: 800;
+    width: fit-content;
+    padding: 20px;
+    background-color: white;
+}
+
+.upper3{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+
+.upper3 .pic3 {
+    max-width: 400px;
+    min-width: 300px;
+    /* min-height: 500px; */
+    max-height: 550px;
+    background: #d9d9d9;
+    overflow: hidden; /* Prevents the image from overflowing */
+    position: relative; /* Ensures proper positioning for any inner content */
+}
+
+
+.pic3 img {
+    width: 100%; /* Makes the image stretch to the width of the container */
+    height: 100%; /* Makes the image fill the container's height */
+    object-fit: contain; /* Ensures the image scales without distortion, maintaining its aspect ratio */
+    object-position: top; /* Centers the image if it gets cropped */
+}
+
+.profile-section3{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+}
+
+.profile-section3 .name-role3{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 20px;
+}
+
+.profile-section3 .name-role3  h1{
+    font-size: 80px;
+    color: #0094b4;
+    font-weight: 700;
+}
+.profile-section3 .name-role3  h3{
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-weight: 400;
+    color: #0094b4;
+}
+
+.profile-section3 .aboutus3{
+    font-size: 12px;
+    background-color: #68d3ec;
+    color: white;
+    padding: 10px 20px;
+}
+
+.profile-section3 .contact-lang3{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #0ec9e1;
+}
+
+.contact-lang3 .contact3, .contact-lang3 .language3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact3 h2, .language3 h2{
+    background-color: white;
+    padding: 10px;
+    color: #00cbe3;
+}
+
+.contact3 ul, .language3 ul{
+    list-style: disc;
+    list-style: inside;
+    color: white;
+}
+
+
+.bottom3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bottom3 .education-skills3 {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #00afd7;
+    padding: 20px;
+}
+
+.education-skills3 .edu3, .education-skills3 .skills3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edu3 h2, .skills3 h2, .experience3 h2{
+    background-color: white;
+    padding: 10px;
+    color: #00cbe3;
+    width: 100%;
+    letter-spacing: 5px;
+}
+
+.skills3 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+    list-style: inside;
+}
+
+.edu3 .education-list3, .experience3 .job-list3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-list3 .education3,.job-list3 .job3{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+}
+
+.education-list3 .education3 div, .job-list3 .job3 div{
+    display: flex;
+    gap: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+.education3 p{
+    margin-left: 20px;
+    color: white;
+    text-align: end;
+}
+
+.bottom3 .experience3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #00afd7;
+    padding: 20px;
+}
+
+.experience3 .job-list3{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    color: white;
+}
+.job3 div{
+    color: white;
+
+}
+
+.job3 p{
+    font-size: small;
+    color: white;
+}
+
 
 /* Scaling for mobile  */
 
@@ -785,6 +971,12 @@ button.removeField:hover {
     }
     .resume1 {
         transform: scale(0.5); /* Adjust the scale as needed */
+        transform-origin: top center;
+        padding: 10px 0; /* Adjust padding as needed */
+    }
+
+    .resume3 {
+        transform: scale(0.4); /* Adjust the scale as needed */
         transform-origin: top center;
         padding: 10px 0; /* Adjust padding as needed */
     }
@@ -805,6 +997,12 @@ button.removeField:hover {
     }
     .resume1 {
         transform: scale(0.4); /* Adjust the scale as needed */
+        transform-origin: top center;
+        padding: 5px 0; /* Adjust padding as needed */
+    }
+
+    .resume3 {
+        transform: scale(0.3); /* Adjust the scale as needed */
         transform-origin: top center;
         padding: 5px 0; /* Adjust padding as needed */
     }

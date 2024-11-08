@@ -157,8 +157,8 @@ const profilePic = profilePicDataURL;
         ${profilePic ? `<img src="${profilePic}" alt="Profile Picture" />` :
         ''}          
           <div class="profile-name1" >
-                <h1>${name}</h1>
-                <h3 >${Mainrole}</h3>
+                <h1 style="color:white;">${name}</h1>
+                <h3  style="color:white;">${Mainrole}</h3>
             </div>
             <div class="contactus1">
                     <p>${email}</p>
@@ -283,7 +283,87 @@ const profilePic = profilePicDataURL;
             break
 
         case 'template3':
-            resumeContent = `<div>template3</div>`
+            resumeContent = `<div class="resume3">
+        <div class="upper3">
+            <div class="pic3">
+            ${profilePic ? `<img src="${profilePic}" alt="Profile Picture" />` :
+        ''}
+        </div>
+            <div class="profile-section3">
+                <div class="name-role3">
+                    <h1>${name}</h1>
+                    <h3>${Mainrole}</h3>
+                </div>
+                <div class="aboutus3">${aboutUs}</div>
+                <div class="contact-lang3">
+                    <div class="contact3">
+                        <h2>CONTACT</h2>
+                    <ul >
+                        <p>${email}</p>
+                        <p>${address}</p>
+                        <p>${phone}</p>
+                    </ul>
+                </div>
+                    <div class="language3">
+                        <h2>LANGUAGES</h2>
+                    <ul >
+                        ${languages.map((language: string) => `<li>${language}</li>`).join('')}
+                    </ul>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="bottom3">
+            <div class="education-skills3">
+                <div class="edu3">
+                    <h2>EDUCATION</h2>
+                    <div class="education-list3">
+                    ${degrees.map((degree:string, index:number) => `
+                    <div  class="education3">
+                            <div>
+                                <p>${durations[index]}</p>
+                                <p>●</p>
+                                <p>${degree[index]}</p>
+                            </div>
+                                <p>${institutes[index]}</p>
+                        </div>
+                `).join('')}
+                        
+                        
+                         
+                    </div>    
+                        
+                </div>
+                <div class="skills3">
+                    <h2>SKILLS</h2>
+        <ul>
+        ${skills.map((skill:string)=>
+           `<li>${skill}</li>`).join('')}
+        </ul>
+                </div>
+            </div>
+           
+            <div class="experience3">
+                <h2>EXPERIENCE</h2>
+                <div class="job-list3">
+                ${roles.map((role:string,index:number)=>
+                `<div class="job3">
+                    <div>
+                        <h4>${experienceDurations[index]}</h4>
+                        <h4>●</h4>
+                        <h4>${role}</h4>
+                    </div>
+                    <h4>${companies[index]}</h4>
+                    <p>${tasks[index]}</p>
+                </div>`).join('')}
+                
+                
+                
+            </div>
+            </div>
+        </div>
+        </div>`
             break
 
         case 'template4':
