@@ -334,10 +334,10 @@ resumeForm.addEventListener('submit', (event) => {
         </div>`;
             break;
         case 'template4':
-            resumeContent = `<div>template4</div>`;
+            resumeContent = `<div>template4 is under development so you can use other. Thanks You</div>`;
             break;
         case 'template5':
-            resumeContent = `<div>template5</div>`;
+            resumeContent = `<div>template5 is under development so you can use other. Thanks You</div>`;
             break;
         case 'template6':
             resumeContent = `
@@ -436,7 +436,7 @@ ${profilePic ? `<img src="${profilePic}" alt="Profile Picture" />` :
                     `;
             break;
         case 'template7':
-            resumeContent = `<div>template7</div>`;
+            resumeContent = `<div>template7 is under development so you can use other. Thanks You</div>`;
             break;
         // Add other cases for template3, template4, etc.
         default:
