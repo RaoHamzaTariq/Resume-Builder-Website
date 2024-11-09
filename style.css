@@ -99,7 +99,7 @@ header{
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px); 
 }
-
+    
 header img{
     width: 150px;
     height: auto;
@@ -394,10 +394,14 @@ main{
     
 
     #hero-section .hero-section-img {
-        width: 300px;
-        min-width: 200px;
+        width: 250px;
+        min-width: 250px;
         height: auto;
         border-radius: 20px;
+    }
+
+    .testimonial{
+        width: 250px;
     }
 
     .footer-content {
@@ -970,7 +974,6 @@ button.removeField:hover {
     height: auto;
     max-width: 800px;
     min-width: 800px;
-    max-height: 1400px;
     width: fit-content;
     background-color: white;
 }
@@ -1097,6 +1100,7 @@ button.removeField:hover {
     min-width: 480px;
     max-width: 480px;
     padding: 60px 0;
+    height: 100%;
 }
 
 
@@ -1111,6 +1115,7 @@ button.removeField:hover {
 .profile-name6 h1{
     font-size: 50px;
     letter-spacing: 10px;
+    line-height: 50px;
 }
 
 .profile-name6 h2{
@@ -1142,6 +1147,7 @@ button.removeField:hover {
     font-weight: 400;
     color: #868686;
     margin-top: 10px;
+    text-align: justify;
 }
 
 .experience6 .job-list6{
@@ -1179,6 +1185,7 @@ button.removeField:hover {
     font-size: 14px;
     color: #868686;
     width: 270px;
+    text-align: justify;
 }
 
 .skillsection6 ul{
@@ -1192,6 +1199,8 @@ button.removeField:hover {
 }
 
 /* Scaling for mobile  */
+
+
 
 /* Scale down the entire resume for mobile screens */
 @media (max-width: 600px) {
@@ -1245,7 +1254,7 @@ button.removeField:hover {
     }
 
     .resume6 {
-        transform: scale(0.4); /* Adjust the scale as needed */
+        transform: scale(0.3); /* Adjust the scale as needed */
         transform-origin: top center;
         padding: 5px 0; /* Adjust padding as needed */
     }
