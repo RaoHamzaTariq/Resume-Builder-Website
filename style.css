@@ -960,6 +960,236 @@ button.removeField:hover {
 }
 
 
+/* For Resume Template 6 */
+
+
+
+
+.resume6{
+    display: flex;
+    height: auto;
+    max-width: 800px;
+    min-width: 800px;
+    width: fit-content;
+    background-color: white;
+}
+
+.left6{
+    background-color: #222127;
+    flex-basis: 40%;
+    min-width: 320px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+.left6 img{
+    height: auto;
+    width: 320px;
+    max-width:  320px;
+}
+
+.left6 .education6, .left6 .language6{
+    padding: 30px 50px;
+    width: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 0px;
+}
+
+.education6 h2, .language6 h2{
+    font-size: 25px;
+    letter-spacing: 7px;
+    font-weight: 400;
+    color: white;
+}
+
+.education6 .edu-list6{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.edu6{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.education6 h3{
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+}
+
+.education6 h4{
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+}
+
+.education6 p{
+    font-size: 14px;
+    color: white;
+    
+}
+
+.language6 ul{
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    gap: 10px;
+
+}
+
+.contact6{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    margin-top: 30px;
+    
+}
+
+.contact6 div{
+    display: flex;
+    gap: 20px;
+}
+
+.contact6 .contactwrap6{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact6 .blocks6{
+    width: 60px;
+    height: 40px;
+    background-color: #ffcb01;
+}
+
+.contactwrap6 h4{
+    font-size: 18px;
+    color: white;
+    background: rgb(32, 32, 32);
+    padding: 10px;
+    width: 100%;
+}
+
+.contactwrap6 p{
+    font-size: 16px;
+    color: white;
+    width: 100%;
+}
+
+
+.right6{
+    background-color: white;
+    flex-basis: 60%;
+    min-width: 480px;
+    max-width: 480px;
+    padding: 60px 0;
+}
+
+
+
+.profile-name6{
+    padding: 40px;
+    width: 100%;
+    background-color: #ffcb01;
+    margin-top: 50px;
+}
+
+.profile-name6 h1{
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+.profile-name6 h2{
+    font-size: 25px;
+    letter-spacing: 7px;
+    font-weight: 400;
+}
+
+
+
+.aboutus6, .experience6, .skillsection6{
+    padding: 30px 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 0px;
+}
+
+.aboutus6 h2, .experience6 h2, .skillsection6 h2{
+    font-size: 25px;
+    letter-spacing: 7px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.aboutus6 p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #868686;
+    margin-top: 10px;
+}
+
+.experience6 .job-list6{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.job6{
+    display: flex;
+    gap: 20px; 
+}
+
+.job6 p{
+    width: 100px;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.job6 div h3{
+    font-size: 20px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.job6 div h4{
+    font-size: 18px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.job6 div p{
+    font-size: 14px;
+    color: #868686;
+    width: 270px;
+}
+
+.skillsection6 ul{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style: inside; 
+    font-size: 14px;
+    font-weight: 400;
+    color: #868686;
+    gap: 10px;
+}
+
 /* Scaling for mobile  */
 
 /* Scale down the entire resume for mobile screens */
@@ -976,6 +1206,12 @@ button.removeField:hover {
     }
 
     .resume3 {
+        transform: scale(0.4); /* Adjust the scale as needed */
+        transform-origin: top center;
+        padding: 10px 0; /* Adjust padding as needed */
+    }
+
+    .resume6 {
         transform: scale(0.4); /* Adjust the scale as needed */
         transform-origin: top center;
         padding: 10px 0; /* Adjust padding as needed */
@@ -1006,6 +1242,13 @@ button.removeField:hover {
         transform-origin: top center;
         padding: 5px 0; /* Adjust padding as needed */
     }
+
+    .resume6 {
+        transform: scale(0.4); /* Adjust the scale as needed */
+        transform-origin: top center;
+        padding: 5px 0; /* Adjust padding as needed */
+    }
+
 
     #resumeDisplay{
         display: flex;
