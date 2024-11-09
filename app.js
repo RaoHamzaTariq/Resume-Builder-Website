@@ -340,7 +340,100 @@ resumeForm.addEventListener('submit', (event) => {
             resumeContent = `<div>template5</div>`;
             break;
         case 'template6':
-            resumeContent = `<div>template6</div>`;
+            resumeContent = `
+                    <div class="resume6">
+        <div class="left6">
+${profilePic ? `<img src="${profilePic}" alt="Profile Picture" />` :
+                ''}
+           <div class="education6">
+                <h2>EDUCATION</h2>
+                <hr>
+            <div class="edu-list6">
+             ${degrees.map((degree, index) => `
+                    <div class="edu6">
+                        <h3>${degree[index]}</h3>
+                        <h4>${institutes[index]}</h4>
+                        <p>${durations[index]}</p>
+                    </div>
+                `).join('')}
+                
+                    
+                </div>
+            </div>
+
+            <div class="language6">
+                <h2>LANGUAGES</h2>
+                <hr>
+                <ul>
+                    ${languages.map((language) => `<li>${language}</li>`).join('')}
+                </ul>
+            </div>
+            <div class="contact6">
+                <div>
+                    <div class="blocks6"></div>
+                    <div class="contactwrap6">
+                        <h4>Phone</h4>
+                    <p>${phone}</p>
+                    </div>
+                    
+                </div>
+                
+                <div>
+                    <div class="blocks6"></div>
+                    <div class="contactwrap6">
+                    <h4>Email</h4>
+                    <p>${email}</p>
+                </div>
+                </div>
+                <div>
+                    <div class="blocks6"></div>
+                    <div class="contactwrap6">
+                        <h4>Address</h4>
+                    <p>${address}</p>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        
+        <div class="right6">
+            <div class="profile-name6">
+                <h1>${name}</h1>
+                <h2>${Mainrole}</h2>
+            </div>
+            <div class="aboutus6">
+                <h2>ABOUT ME</h2>
+                <hr>
+                <p>${aboutUs}</p>
+            </div>
+            <div class="experience6">
+                <h2>WORK EXPERIENCE</h2>
+                <hr>
+                <div class="job-list6">
+                ${roles.map((role, index) => `<div class="job6">
+                        <p>${experienceDurations[index]}</p>
+                        <div>
+                            <h3>${role}</h3>
+                            <h4>${companies[index]}</h4>
+                            <p>${tasks[index]}</p>
+                        </div>
+                    </div>`).join('')}
+                    
+                        
+                </div>
+            </div>
+            <div class="skillsection6">
+                <h2>MY SKILLS</h2>
+                <hr>
+                <ul>
+                     ${skills.map(skill => `<li>${skill}</li>`).join('')}
+                </ul>
+            </div>
+
+            </div>
+    </div>
+                    
+                    `;
             break;
         case 'template7':
             resumeContent = `<div>template7</div>`;
