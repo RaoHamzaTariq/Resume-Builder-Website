@@ -351,7 +351,7 @@ ${profilePic ? `<img src="${profilePic}" alt="Profile Picture" />` :
             <div class="edu-list6">
              ${degrees.map((degree, index) => `
                     <div class="edu6">
-                        <h3>${degree[index]}</h3>
+                        <h3>${degree}</h3>
                         <h4>${institutes[index]}</h4>
                         <p>${durations[index]}</p>
                     </div>
